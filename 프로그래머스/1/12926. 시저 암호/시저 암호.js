@@ -1,6 +1,4 @@
 function solution(s, n) {
-    // a
-    let result = ''
     return s.split('').map(c=> {
         if(c !== ' ') {
             return c.toUpperCase() === c ? 
@@ -10,5 +8,4 @@ function solution(s, n) {
         }
         return ' '
     }).join('')
-
 }
