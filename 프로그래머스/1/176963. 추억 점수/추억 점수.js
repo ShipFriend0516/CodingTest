@@ -1,0 +1,1 @@
+const solution = (name, yearning, photos) => photos.map((photo,idx)=> photo.map((person,idx)=> name.indexOf(person) !== -1 ? yearning[name.indexOf(person)] : 0).reduce((a,b)=>a+b))
