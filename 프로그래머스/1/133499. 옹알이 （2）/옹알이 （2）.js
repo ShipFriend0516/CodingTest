@@ -11,7 +11,6 @@ function solution(babbling) {
         .replaceAll('woo', '_')
         .replaceAll('ma', '_')
     })
-    console.log(filteredBabbling)
     
     return filteredBabbling.filter(babbling=> babbling.replaceAll('_','').length === 0).length
     
