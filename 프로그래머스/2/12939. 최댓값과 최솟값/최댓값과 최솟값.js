@@ -1,0 +1,1 @@
+const solution = (s) => [Math.min(...s.split(' ').map(s=>parseInt(s))),Math.max(...s.split(' ').map(s=>parseInt(s)))].join(' ')
