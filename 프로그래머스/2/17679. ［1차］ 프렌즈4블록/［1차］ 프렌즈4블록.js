@@ -1,5 +1,4 @@
 function solution(m, n, board) {
-    
     let gameover = true;
     let stack = [];
     let destroyCount = 0;
@@ -16,7 +15,7 @@ function solution(m, n, board) {
             stack.push([y,x],[y+1,x],[y,x+1],[y+1,x+1])
         }
     }
-    
+     
     while(gameover) {
         for(let i=0;i<m-1;i++) {
             for(let j=0;j<n-1;j++) {
