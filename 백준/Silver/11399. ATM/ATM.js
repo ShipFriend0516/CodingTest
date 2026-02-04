@@ -1,17 +1,15 @@
 const fs = require("fs");
-const input = fs.readFileSync("../dev/stdin").toString().trim();
+const filePath = process.platform === "linux" ? "/dev/stdin" : "./서정우/input.txt";
+const input = fs.readFileSync(filePath).toString().trim().split("\n");
 
-const solution = (input) => {
-  const lines = input.split("\n").map((el) => el.trim());
-  const times = lines[1].split(" ").map(Number);
-  times.sort((a, b) => a - b);
-  let result = 0;
-
-  for (let i = 0; i < times.length; i++) {
-    result += times.slice(0, i + 1).reduce((a, b) => a + b, 0);
+const people = input[1].split(" ").map(Number);
+people.sort((a, b) => a - b);
+let result = 0;
+for (let i = 0; i < people.length; i++) {
+  let sum = 0;
+  for (let j = 0; j < i + 1; j++) {
+    sum += people[j];
   }
-
-  console.log(result);
-};
-
-solution(input);
+  result += sum;
+}
+console.log(result);
